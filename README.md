@@ -45,7 +45,7 @@ Regular User:
 Once logged in, you can access the API endpoints:
 
 - **Threads:** `http://localhost:8000/api/messaging/threads/`
-- **Messages:** `http://localhost:8000/api/messaging/messages/`
+- **Messages:** `http://localhost:8000/api/messaging/threads/<thread_id>/messages/`
 
 Endpoints
 ---------
