@@ -8,19 +8,21 @@ Install the project
    python -m venv venv
    source venv/bin/activate  # On Windows use: venv\Scripts\activate
 
-3. **Install dependencies:**
+3. **cd backend**
+
+4. **Install dependencies:**
 
    pip install -r requirements.txt
 
-4. **Apply migrations:**
+5. **Apply migrations:**
 
-   python manage.py migrate   (on backend directory)
+   python manage.py migrate
 
-5. **Load initial data (optional):**
+6. **Load initial data:**
 
    sqlite3 db.sqlite3 < db_dump.sql
 
-6. **Run the server:**
+7. **Run the server:**
 
    python manage.py runserver
 
@@ -38,7 +40,7 @@ Admin User:
 - **Username:** root
 - **Password:** rootroot
 
-Regular User:
+Regular User(staff, you can login from admin):
 - **Username:** user2
 - **Password:** rootroot
 
@@ -55,5 +57,5 @@ Endpoints
 - `GET /api/messaging/threads/<id>/messages/` - List messages in a thread (requires thread ID in the URL).
 - `POST /api/messaging/threads/<id>/messages/` - Create a new message in a thread.
 - `POST /api/messaging/threads/<id>/messages/bulk_mark_read/` - Mark a messages as read for not sender.
-- `GET /api/messaging/messages/unread_messages/count/` - Retrieve the count of unread messages for the authenticated user.
+- `GET /api/messaging/unread_messages/count/` - Retrieve the count of unread messages for the authenticated user.
 
